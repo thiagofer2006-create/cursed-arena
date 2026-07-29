@@ -10,14 +10,19 @@
 	- Sem lógica de gameplay
 ]]
 
-local InputController = require(script.Parent.InputController)
 local MovementController = require(script.Parent.MovementController)
 local SprintController = require(script.Parent.SprintController)
+local PunchController = require(script.Parent.PunchController)
+local InputController = require(script.Parent.InputController)
 
 local function init(): ()
-	InputController.init()
 	MovementController.init()
 	SprintController.init()
+	PunchController.init()
+
+	-- O Input fica por último para garantir que todos os
+	-- controllers já estejam escutando os sinais.
+	InputController.init()
 end
 
 init()

@@ -6,9 +6,9 @@
 	Camada central de input do cliente.
 
 	Responsabilidades:
-	- Escutar ações do jogador (teclado, gamepad, mobile)
+	- Escutar ações do jogador (teclado, mouse, gamepad, mobile)
 	- Disparar sinais de input para outros controllers
-	- Evitar duplicação de UserInputService/ContextActionService nos módulos
+	- Evitar duplicação de UserInputService nos módulos
 ]]
 
 local UserInputService = game:GetService("UserInputService")
@@ -27,8 +27,16 @@ local function onInputBegan(input: InputObject, gameProcessed: boolean): ()
 		return
 	end
 
+	-- Sprint
 	if input.KeyCode == SPRINT_KEY then
 		Signals.SprintRequested:Fire(true)
+		return
+	end
+
+	-- Punch
+	if input.UserInputType == Enum.UserInputType.MouseButton1 then
+		Signals.PunchRequested:Fire()
+		return
 	end
 end
 
