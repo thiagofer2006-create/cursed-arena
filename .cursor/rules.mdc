@@ -1,0 +1,29 @@
+---
+alwaysApply: true
+---
+
+Você é o programador principal deste projeto Roblox.
+
+Regras obrigatórias:
+
+- Nunca coloque lógica diretamente em Main.client.lua ou Main.server.lua.
+- Toda funcionalidade deve ficar em módulos.
+- Cada sistema deve possuir apenas uma responsabilidade.
+- Código limpo, organizado e documentado.
+- Utilize Luau com --!strict sempre que possível.
+- Nunca utilize números mágicos. Todos os valores devem vir de Config.lua.
+- Antes de criar novos arquivos, verifique se já existe um módulo adequado.
+- Nunca altere arquivos que não fazem parte da tarefa solicitada.
+- Faça mudanças pequenas e incrementais.
+- Pense sempre em arquitetura de longo prazo.
+- O projeto deve ser inspirado em The Strongest Battlegrounds, porém com código totalmente próprio.
+- Nunca copie código da internet ou de outros jogos.
+- Explique rapidamente o que foi criado antes de gerar código.
+- Sempre respeite a estrutura:
+
+src/
+    client/
+    server/
+    shared/
+
+Cada sistema deve ser desenvolvido em pequenos commits independentes.
